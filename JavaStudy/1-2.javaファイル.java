@@ -13,10 +13,10 @@ public class Task1_2 {
     public static void main(String[] args) {
 
         // ①「JAPAN」、「AMERICA」、「KOREA」を要素の値（初期値）とする配列 countryを作成しなさい。
-string[] country={“LAPAN”,”AMERICA”,”KOREA”};
+String[] country={"LAPAN","AMERICA","KOREA"};
 
         // ② ①で作成した配列の要素数を出力してください。
-System.out.println(“配列countryの要素数”+country.length);
+System.out.println("配列countryの要素数"+country.length);
 
         /* ③下記の値を保持した、要素数3のStringクラスの配列strArrayを作成しなさい。
          *   1番目（先頭）の要素に 「りんご」 を代入
@@ -24,22 +24,19 @@ System.out.println(“配列countryの要素数”+country.length);
          *   3番目の要素に 「ぶどう」 を代入
          */
 String[] strArray=new String[3];
-strArray[0]=“りんご”;
-strArray[１]＝”もも”;
-strArray[2]=”ぶどう”;
+strArray[0]="りんご";
+strArray[1]="もも";
+strArray[2]="ぶどう";
 
 
         // ④ ③で作成した配列の2番目の要素を出力しなさい。
-System.out.println(strArray[1]）;
+System.out.println(strArray[1];
         /* ⑤下記の処理について、何をしているのかコメントを記入してください。
          *  [ここへ記述]10,20,30,40,50を要素の値とする、要素数５のintArrayという名前のint型配列を宣言。
          */
         int[] intArray = { 10, 20, 30, 40, 50 };
 
         // ⑥下記の処理について、何をしているのかコメントを記入してください。
-        // [ここへ記述]intArray[1]とintArray[4]を表示さしている
+        // [ここへ記述]intArrayで宣言した2番目と５番目の要素が足されたものが出てくる
         System.out.println(intArray[1] + intArray[4]);
-
-    }
-
-}
+    }}

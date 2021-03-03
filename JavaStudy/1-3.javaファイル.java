@@ -22,14 +22,14 @@ int minus=20-7;
         int multiply = 10 * 2;
 
         // ④ 20 を 6 で割った余りを代入する、変数 remi を作成しなさい。
-Int remi=20%6;
+int remi=20%6;
         // ⑤下記の処理について、何をしているのかコメントを記入してください
         // [ここへ記述]townに有楽町、lineに線を代入する
         String town = "有楽町";
         String line = "線";
 
         // ⑥ ⑤で作成した変数を連結させた値を代入する変数 train を作成しなさい。
-String train=“有楽町”+”線”;
+String train="有楽町"+"線";
         // ⑦ 変数plus, minus, multiply, remi, train をそれぞれ出力しなさい。
 System.out.println(plus);
 System.out.println(minus);

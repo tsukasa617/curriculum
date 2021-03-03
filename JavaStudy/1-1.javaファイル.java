@@ -14,32 +14,31 @@ public class Task1_1 {
         // ①int型の hogeInt という名前の変数を宣言し、値「50」で初期化
 int hogeInt=50;
 
- }
-}
+
+
   
         // ②Stringクラスの hogeString という名前の変数を宣言、値「テスト」で初期化
-String hogeString=“テスト”;
+String hogeString="テスト";    
 
- }
-}
         // ③下記の処理について、何をしているのかコメントを記入してください
         // [ここへ記述]　double型のhogeDoubleに0.2を宣言する
         double hogeDouble = 0.2;
 
-        // ④変数 hogeInt を値「100」で上書き
-int hogeInt=100;
+        // ④変数  hogeIntを値「100」で上書き
+        hogeInt=100;
 
         // ⑤変数 hogeString を値「合格」で上書き
-String hogeString="合格";
+        hogeString="合格";
 
         // ⑥変数 hogeInt の値を表示
-        int hogeInt=100;
-System.out.println（hogeInt);
+       
+System.out.println(hogeInt);
         // ⑦下記の処理について、何をしているのかコメントを記入してください
         // [ここへ記述]hogeStringを表示させる
-        System.out.println("hogeString");
+        System.out.println(hogeString);
 
         // ⑧変数 hogeDouble の値を表示
-        double hogeDouble = 0.2;
+        
 System.out.println(hogeDouble);
+    }}
 
