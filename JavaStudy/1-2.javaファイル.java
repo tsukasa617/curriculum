@@ -30,7 +30,7 @@ strArray[2]="ぶどう";
 
 
         // ④ ③で作成した配列の2番目の要素を出力しなさい。
-System.out.println(strArray[1];
+System.out.println(strArray[1]);
         /* ⑤下記の処理について、何をしているのかコメントを記入してください。
          *  [ここへ記述]10,20,30,40,50を要素の値とする、要素数５のintArrayという名前のint型配列を宣言。
          */
