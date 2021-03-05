@@ -11,7 +11,8 @@ public class Check{
       */
       for(int i = 0; i < data.length; i++){
           System.out.print(data[i] + " ");
-      }
+          }
+      
       System.out.println();
       for (int i = 0; i <data.length ; i++) {
           for (int j = data.length; j > i; j--) {
