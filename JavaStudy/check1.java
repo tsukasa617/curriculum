@@ -13,17 +13,17 @@ public class Check{
           System.out.print(data[i] + " ");
           }
       
-      System.out.println();
-      for (int i = 0; i <data.length ; i++) {
-          for (int j = data.length; j > i; j--) {
-              /*
-              * 問3
-              * 以下、配列の添字を入れてソートを完成させなさい
-              */
-              if(data[i] > data[j]){
-                int box = data[j];
-                data[i] = data[j];
-                data[i] = box;
+          System.out.println();
+          for (int i = 0; i <data.length-1 ; i++) {
+              for (int j = data.length-1; j > i; j--) {
+                  /*
+                  * 問3
+                  * 以下、配列の添字を入れてソートを完成させなさい
+                  */
+                  if(data[j-1] > data[j]){
+                    int box = data[j];
+                    data[j] = data[j-1];
+                    data[j-1] = box;
               }
           }
       }
