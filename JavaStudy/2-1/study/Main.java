@@ -1,9 +1,3 @@
-package study;
-
-import com.sun.tools.sjavac.comp.dependencies.PublicApiCollector;
-
-import jdk.jfr.internal.PrivateAccess;
-import sun.jvm.hotspot.runtime.StaticBaseConstructor;
 
 public class Main {
 
@@ -37,9 +31,10 @@ String lastName="takada";
 		        //  修飾子：public
 		        //   引数には①で定義したfirstNameとlastNameを引数で受け取り、
 		        //  last_name と first_name を連結した値を返り値とする変数を定義しなさい。
-public String getName(String first_name, String last_name ) {
-	return first_name+last_name;
-
+public  getName(String first_name, String last_name ) {
+	this.firstName=first_name;
+	this.lastName=last_name;
+}
 
 
 	    //奇数の判定を行う。
@@ -47,8 +42,8 @@ public String getName(String first_name, String last_name ) {
 	      if(num % 2 != 0) {
 	        System.out.println(num + "は奇数です。");
 	        }
-	  }
+	  
 	}
 	}
 
-}
+
