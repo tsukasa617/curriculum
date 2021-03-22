@@ -1,22 +1,13 @@
 
-/**
- * Main.java
- *
- * 本課題では、mainメソッド・インスタンス・メソッドの呼び出しの使い方を学んでいきましょう。
- * 課題範囲は以下のとおりです。
- *   Study.java: 問①
- *   Main.java: 問①から問②
- * 指定された値と変数名を守って記述してください。
- *
- */
 public class Main {
 
     public static void main(String[] args) {
 
         // ① 以下のルールに従いAccountクラスのインスタンスを生成してください。
         // 変数名:「account」
-Main account=new Main();
+Account account=new Account();
         // ② ①のインスタンス変数より、アカウント情報をコンソール出力するメソッドを呼び出しなさい。
+account.printAccountInfo();
 
     }
 }
@@ -51,10 +42,10 @@ class Account {
 protected String  printAccountInfo(String userName, int id, String password) {
 	 this.userName = "hoge";
      this.id = 123;
-     this.password = "パスワードは、abc123";
-     System.out.println(this.userName);
-     System.out.println(this.id);
-     System.out.println(this.password);
+     this.password = "abc123";
+     System.out.println("ユーザー名は、"+this.userName);
+     System.out.println("IDは、"+this.id);
+     System.out.println("パスワードは、"+this.password);
 }
 
 }
