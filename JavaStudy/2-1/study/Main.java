@@ -15,10 +15,10 @@ String lastName="takada";
 
 	        //③ arr 配列をループさせ、isOdd関数を使って配列の要素が奇数かどうかの判定を行いなさい。
 	        //   要素が奇数の場合には「nは奇数です。」と出力されます。
-			for(int n=0; n<=arr.length; n++){
-	        	isOdd(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+			for(int num=0; num<=arr.length; num++){
+	        	isOdd(num);
 	        }
-
+	}
 
 	         //② 関数を定義しなさい。
 		        //   関数名：getName
@@ -33,7 +33,7 @@ String lastName="takada";
 	      if(num % 2 != 0) {
 	        System.out.println(num + "は奇数です。");
 	        }
-
+		
 	}
 	}
 
