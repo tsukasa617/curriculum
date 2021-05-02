@@ -1,3 +1,5 @@
+
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -11,14 +13,29 @@ String lastName="takada";
 	        System.out.println(getName(firstName, lastName));
 	        System.out.println();
 
-	        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	        int[] arr = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
 	        //③ arr 配列をループさせ、isOdd関数を使って配列の要素が奇数かどうかの判定を行いなさい。
 	        //   要素が奇数の場合には「nは奇数です。」と出力されます。
-			for(int num=0; num<=arr.length; num++){
-	        	isOdd(num);
+	        for(int n=10; n<=20; n++){
+	        	isOdd(n);
 	        }
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	         //② 関数を定義しなさい。
 		        //   関数名：getName
@@ -33,17 +50,8 @@ String lastName="takada";
 	      if(num % 2 != 0) {
 	        System.out.println(num + "は奇数です。");
 	        }
-		
+	    }
+
 	}
-	}
 
 
-
-
-			
-				
-			
-				
-			
-
-			
