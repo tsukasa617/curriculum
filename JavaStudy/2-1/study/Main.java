@@ -17,17 +17,9 @@ String lastName="takada";
 
 	        //③ arr 配列をループさせ、isOdd関数を使って配列の要素が奇数かどうかの判定を行いなさい。
 	        //   要素が奇数の場合には「nは奇数です。」と出力されます。
-			for(int n=0; n<=0; n++){
-	        	isOdd(arr[0]);
-	        	isOdd(arr[1]);
-	        	isOdd(arr[2]);
-	        	isOdd(arr[3]);
-	        	isOdd(arr[4]);
-	        	isOdd(arr[5]);
-	        	isOdd(arr[6]);
-	        	isOdd(arr[7]);
-	        	isOdd(arr[8]);
-	        	isOdd(arr[9]);
+			for(int n=0; n<arr.length; n++){
+	        	isOdd(arr[n]);
+
 	        }
 	}
 
