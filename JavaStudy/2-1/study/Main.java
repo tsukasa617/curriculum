@@ -23,21 +23,6 @@ String lastName="takada";
 	        }
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	         //② 関数を定義しなさい。
 		        //   関数名：getName
 		        //  修飾子：public
