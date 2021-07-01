@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+<!-- ここから -->
+ <welcome-file-list>
+ <welcome-file>select.html</welcome-file>
+ </welcome-file-list>
+ <servlet>
+ <servlet-name>select</servlet-name>
+ <!--問① サーブレットのクラス名を入れてください。-->
+ <servlet-class>(デフォルト.パッケージ).SelectServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>select</servlet-name>
+ <!--問② URLパターンを記述してください。-->
+ <url-pattern>/sample</url-pattern>
+ </servlet-mapping>
+<!-- ここまで -->
+</web-app>

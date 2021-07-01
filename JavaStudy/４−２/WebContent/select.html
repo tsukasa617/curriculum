@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>select</title>
+</head>
+<body>
+ <div align="center">
+ 今日は何月ですか？
+ <!--問① web.xmlのurl-patternを確認しformの遷移先を指定しましょう。 -->
+ <form action="/デフォルト.パッケージ/sample"></form>
+ <form action="./month" method="post">
+ <select name="month">
+ <option value="1">1月</option>
+ <option value="2">2月</option>
+ <!--問② 3月~12月も同様に選択できるよう記述しましょう。 -->
+  <option value="1">3月</option>
+   <option value="1">4月</option>
+    <option value="1">5月</option>
+     <option value="1">6月</option>
+      <option value="1">7月</option>
+       <option value="1">8月</option>
+        <option value="1">9月</option>
+         <option value="1">10月</option>
+          <option value="1">11月</option>
+          <option value="1">12月</option>
+
+ </select> <input type="submit" name="button" value="送信">
+ </form>
+ </div>
+</body>
+</html>

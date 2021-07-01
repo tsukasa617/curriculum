@@ -1,4 +1,4 @@
-public class Check{
+public class check1{
   public static void main(String[] args){
       /*
       * 問1
