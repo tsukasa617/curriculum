@@ -7,12 +7,12 @@
  <servlet>
  <servlet-name>select</servlet-name>
  <!--問① サーブレットのクラス名を入れてください。-->
- <servlet-class>(デフォルト.パッケージ).SelectServlet</servlet-class>
+ <servlet-class>SelectServlet</servlet-class>
  </servlet>
  <servlet-mapping>
  <servlet-name>select</servlet-name>
  <!--問② URLパターンを記述してください。-->
- <url-pattern>/sample</url-pattern>
- </servlet-mapping>
+ <url-pattern>/month</url-pattern>
+  </servlet-mapping>
 <!-- ここまで -->
 </web-app>

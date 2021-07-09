@@ -1,0 +1,34 @@
+.header{
+background-color: gray;
+
+}
+
+.name{
+display: inline-block;
+padding: 10px;
+color: white;
+font-size: 20pt
+}
+
+.name2{
+padding: 10px;
+font-size: 10px;
+}
+
+.main{
+padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.footer{
+background-color: gray;
+
+}
+
+.footer1{
+display: inline-block;
+padding: 10px;
+color: white;
+font-size: 12pt
+}
+
