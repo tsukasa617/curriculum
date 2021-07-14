@@ -19,7 +19,7 @@
 <header>
 <div class="header">
   <label class = "name">login
-   <div　style="float:left;" class = "name2">
+   <div style="float:left;" class = "name2">
   <%Calendar calendar = Calendar.getInstance();
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 	String today =sdf.format(calendar.getTime()) ;

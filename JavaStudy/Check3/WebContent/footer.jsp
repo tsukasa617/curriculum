@@ -11,7 +11,7 @@
 
 <!-- フッターを作成 -->
    <div class="footer">
-   <label class = "footer1"　>hoge.Inc</label>
+   <label class = "footer1">hoge.Inc</label>
 
    </div>
 </body>

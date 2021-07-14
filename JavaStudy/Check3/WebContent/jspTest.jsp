@@ -19,21 +19,19 @@
 
 
 
-                  <ul>      <li>  <th>
-                            name
-                        </th>
-<td>
-    <input type="text" name="user_id" value="" size="24">
-  </td>　 </li>
+                <table>
+<tr>
+    <td>name</td>
 
-             <li>      <th>
-                        id
-                       </th>
- <td>
-  <input type="password" name="password" value="" size="24">
-</td> </li>
+  <td> <input type="text" name="user_id" value="" size="24"></td>
+  </tr>
+<tr>
+     <td> id</td>
 
-</ul>
+ <td><input type="password" name="password" value="" size="24">
+</td></tr>
+
+</table>
   </div>
  <%@ include file="footer.jsp"%>
 
