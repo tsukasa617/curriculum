@@ -2,7 +2,7 @@
  
 -- 1. 店舗テーブルから店舗名を抽出しなさい。また、列名の表示は別名で'店舗名'とすること。
 -- [回答]
- select store_name 店舗名 from store_table
+ select store_name AS 店舗名 from store_table
  
 -- 2. 店舗情報を店舗名のABC順に抽出しなさい。
 -- [回答]
@@ -20,7 +20,7 @@ INNER JOIN goods_table ON stock_table.goods_code=goods_table.goods_code
  
 -- 5. 店舗コード='EA01'の在庫数の平均値より大きい在庫数を持つ店舗コードを抽出しなさい。
 -- [回答]
-SELECT COUNT(store_code)FROM stock_table WHERE quantity >= 20
+SELECT store_code FROM stock_table WHERE quantity >=(select avg(quantity) from stock_table　where store_code='EA01')
  
  
 -- 6. 商品テーブルに「商品コード='M001'、商品名='マフラー'、単価=4500円、更新日付=本日日付」のデータを追加しなさい。※実行後のSELECT結果も貼付すること。
