@@ -1,0 +1,144 @@
+html {
+  font-size: 100%;
+  font-family: 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+body {
+  margin: 0;
+  background-color: #FFCC99;
+  color: #6c7686;
+}
+
+a{
+  text-decoration: none;
+}
+
+.top{
+  text-align:center;
+}
+
+h1{
+  color:#996633;
+  letter-spacing: 10px;
+}
+
+.itirann{
+  color:#66CC99;   
+}
+
+.header-logo {
+  margin-left: 56px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 56px;
+  color: #6c7686;
+  display: inline;
+}
+
+.main-header .new-button {
+  background: #80bcff;
+  border-radius: 30px;
+  font-size: 14px;
+  width: 120px;
+  height: 45px;
+  line-height: 43px;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #80bcff;
+}
+
+.table-body {
+  background-color: #ffffff;
+}
+
+.table-body li {
+  height: 72px;
+  border: 1px solid #f0f4f9;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-data {
+  display: flex;
+}
+
+.item-menu {
+  display: flex;
+}
+
+.item-menu form {
+  width: 60px;
+  text-align: center;
+}
+
+.item-menu form input {
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none;
+  padding: 0;
+  border: none;
+}
+
+.item-menu form input:hover {
+  color: #ff7f8c;
+  transition: all 0.3s ease;
+}
+
+.item-menu a {
+  width: 60px;
+  font-size: 16px;
+  color: #bac6d3;
+  text-align: center;
+}
+
+.item-menu a:hover {
+  color: #80bcff;
+}
+
+.main {
+  width: 85%;
+  min-width: 360px;
+  max-width: 720px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.send {
+  background-color: #ffffff;
+  border: 1px solid #f0f4f9;
+  border-radius: 0px 0px 2px 2px;
+  padding: 32px;
+}
+
+.container {
+  width: 85%;
+  min-width: 360px;
+  max-width: 720px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.item-form-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #f0f4f9;
+  border-radius: 0px 0px 2px 2px;
+  padding: 32px;
+}
