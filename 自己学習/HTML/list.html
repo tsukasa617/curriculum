@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>レシピ一覧</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-logo">TOP画面へ</a>
+    </header>
+    <div class="main">
+      <div class="main-header">
+        <h1>レシピ一覧</h1>
+        <a href="/send" class="new-button">+ 新規登録</a>
+      </div>
+      <div class="index-table-wrapper">
+        <div class="table-head">
+          <span class="id-column">NO.</span>
+          <span>レシピのタイトル</span>
+        </div>
+
+        <ul class="table-body">
+          <% items.forEach((item) => { %>
+            <li>
+              <div class="item-data">
+                <span class="NO"><%= item.NO%></span>
+                <span class="title"><%= item.title%></span>
+                <span class="recipe"><%= item.recipe%></span>
+              </div>
+              <div class="item-menu">
+              <form action="/delete/<%=item.NO%>" method="post">
+                <input type="submit" value="削除">
+              </form>
+              <a href="/edit/<%=item.NO%>">編集</a>
+            </div>
+            </li>
+          <% }) %>
+        </ul>
+  </body>
+</html>

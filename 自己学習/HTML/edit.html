@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>編集</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a href="/" class="header-logo">TOP画面へ</a>
+</header>
+<div class="container">
+  <div class="container-header">
+    <h1>レシピのタイトル編集</h1>
+    <a href="/list" class="cancel-button">キャンセル</a>
+  </div>
+  <div class="item-form-wrapper">
+    <p class="form-label">レシピのタイトル</p>
+    <form action="/update/<%= item.NO %>" method="post">
+        <input name="itemName" type="text" value="<%=item.title%>">
+      <input type="submit" value="更新する">
+    </form>
+  </div>
+
+</div>
+</body>
+</html>
