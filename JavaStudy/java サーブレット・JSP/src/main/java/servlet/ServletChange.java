@@ -16,7 +16,9 @@ public class ServletChange extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
+		
+		
 		try {
 
 			//商品コードsearchオブジェクト宣言
@@ -26,6 +28,9 @@ public class ServletChange extends HttpServlet {
 
 			//パラメータの取得	 
 			String num = request.getParameter("product_code");
+			String name = request.getParameter("product_name");
+			int price = (Integer.parseInt(request.getParameter("price")));
+			
 			String MyAction = request.getParameter("MySubmit");	
 
 			/*
@@ -36,7 +41,7 @@ public class ServletChange extends HttpServlet {
 			Change Change = new Change();
 
 			//商品コード検索メソッドを呼び出し
-			search = Change.selectById(num);
+			search = Change.selectById(num,name,price);
 
 			//検索結果を持ってchange.jspにフォワード
 			request.setAttribute("search", search);

@@ -7,15 +7,16 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 
 import bean.Bean;
-import db.DB;
+import db.ConnectionDB;
+
 
 public class Change {
 
 	//	DB接続
-	DB DB = new DB();
+	ConnectionDB condb = new ConnectionDB();
 
 	//指定された1件の商品コードを検索するメソッド
-	public Bean selectById(String num) {
+	public Bean selectById(String num, String name, int price) {
 
 		//変数宣言
 		Connection con = null;
@@ -25,10 +26,14 @@ public class Change {
 		Bean bean = new Bean();
 
 		//SQL文
-		String select = "SELECT product_code FROM m_product WHERE product_code = '" + num + "'";
+		String select = "SELECT product_code, product_name, price"
+				+ " FROM m_product WHERE "
+				+ " product_code = '" + num 
+				+ " product_name = '" + name
+				+ " price = '" +  price;
 
 		try {
-			con = DB.getConnection();
+			con = condb.getConnection();
 			statement = con.createStatement();
 
 			//SQLをDBへ発行
@@ -38,6 +43,8 @@ public class Change {
 			//取得した結果をDTOオブジェクトに格納
 			if (rs.next()) {
 				bean.setNum(dformat.format(rs.getInt("product_code")));
+				bean.setName(rs.getString("product_name"));
+				bean.setPrice(rs.getInt("price"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -65,11 +72,15 @@ public class Change {
 		String select = "SELECT product_code FROM m_product WHERE product_code = '" + num + "'";
 
 		try {
-			con = DB.getConnection();
+			con = condb.getConnection();
 			statement = con.createStatement();
 			//SQLをDBへ発行
 			ResultSet rs = statement.executeQuery(select);
 			DecimalFormat dformat = new DecimalFormat("000");
+			//取得した結果をDTOオブジェクトに格納
+			if (rs.next()) {
+				bean.setNum(dformat.format(rs.getInt("product_code")));
+			}
 	
 		//変更SQL文
 		String updateSQL = "UPDATE m_product SET "
@@ -77,7 +88,7 @@ public class Change {
 				+ " price = '" + bean.getPrice() + "', "
 				+ " WHERE product_code = '" + (dformat.format(rs.getInt("product_code"))) + "'";
 		
-		con1 = DB.getConnection();
+		con1 = condb.getConnection();
 		statement1 = con1.createStatement();
 
 		//SQLをDBへ発行
@@ -130,7 +141,7 @@ public class Change {
 
 		try {
 
-			con2 = DB.getConnection();
+			con2 = condb.getConnection();
 			statement2 = con2.createStatement();
 
 			//SQLをDBへ発行

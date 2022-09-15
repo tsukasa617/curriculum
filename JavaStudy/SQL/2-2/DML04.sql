@@ -1,0 +1,1 @@
+DELETE FROM t_sales WHERE product_code = 002;

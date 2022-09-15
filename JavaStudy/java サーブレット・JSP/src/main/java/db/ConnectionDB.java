@@ -3,7 +3,7 @@ package db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DB {
+public class ConnectionDB {
 
 	String RDB_DRIVE = "com.mysql.cj.jdbc.Driver";
 	String URL = "jdbc:mysql://localhost/bkadai";

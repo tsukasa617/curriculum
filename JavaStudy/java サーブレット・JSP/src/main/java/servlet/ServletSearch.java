@@ -31,10 +31,10 @@ public class ServletSearch extends HttpServlet {
 			 */
 
 			//Searchクラスをインスタンス化する。                
-			Search bkadaiSearch = new Search();
+			Search search = new Search();
 
-			//  BkadaiBeanに、BkadaiSearchよりsearch関数を呼び出し、全検索メソッド実行
-			listSearch = bkadaiSearch.search(name);
+			// Beanに、searchよりsearch関数を呼び出し、全検索メソッド実行
+			listSearch = search.searchList(name);
 
 			//検索結果を持ってsearch.jspにフォワード
 			request.setAttribute("listSearch", listSearch);

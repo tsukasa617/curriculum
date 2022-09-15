@@ -3,6 +3,17 @@ package bean;
 import java.io.Serializable;
 import java.sql.Date;
 
+/**
+ * コードの共有、再利用、する
+ *
+ * @param name
+ * @param num
+ * @param price
+ * @param quantity
+ * @param date
+ * @param coment
+ */
+
 public class Bean implements Serializable {
 
 	private String name;
@@ -11,10 +22,6 @@ public class Bean implements Serializable {
 	private int quantity;
 	private Date date;
 	private String coment;
-
-	public Bean() {
-
-	}
 
 	//	商品名
 	public void setName(String name) {

@@ -10,23 +10,22 @@ import java.util.ArrayList;
 import bean.Bean;
 import db.ConnectionDB;
 
-
-public class Search {
+public class CSV {
 
 	//	DB接続
 	ConnectionDB condb = new ConnectionDB();
 
-	// 送信された商品名を元に商品コード、商品名、単価を検索するためのメソッド
+	// CSVを出力するためのメソッド
 	/**
-     * 商品コード、商品名、単価を検索
-     *
-     * @param selectSQL
-     * @param con
-     * @param statement
-     * @return listSearchリストに検索結果を格納する
-     * @throws SQLException
-     */
-	public ArrayList<Bean> searchList(String name) {
+	 * 
+	 *
+	 * @param selectSQL
+	 * @param con
+	 * @param statement
+	 * @return listSearchリストに検索結果を格納する
+	 * @throws SQLException
+	 */
+	public ArrayList<Bean> searchList(String filename) {
 
 		//変数宣言
 		Connection con = null;
@@ -35,19 +34,18 @@ public class Search {
 		//return用オブジェクトの生成
 		ArrayList<Bean> listSearch = new ArrayList<Bean>();
 
-		//	商品検索
-		String selectSQL = "SELECT product_code,product_name,price FROM m_product WHERE product_name LIKE '%" + name
-				+ "%'";
-
+		// 商品コード、商品名、単価検索
+		String selectSQL1 = "SELECT * FROM m_product LEFT OUTER JOIN t_sales ON m_product.product_code = t_sales.product_code";
+	
 		try {
 			con = condb.getConnection();
 			statement = con.createStatement();
 
 			//SQLをDBへ発行
-			ResultSet rs = statement.executeQuery(selectSQL);
+			ResultSet rs1 = statement.executeQuery(selectSQL1);
 			DecimalFormat dformat = new DecimalFormat("000");
-
-			if (rs.next() == false) {
+	
+			if (rs1.next() == false) {
 
 				System.out.println("データはありません");
 				return listSearch;
@@ -57,21 +55,18 @@ public class Search {
 			do {
 
 				Bean bean = new Bean();
-				bean.setNum(dformat.format(rs.getInt("product_code")));
-				bean.setName(rs.getString("product_name"));
-				bean.setPrice(rs.getInt("price"));
+				bean.setNum(dformat.format(rs1.getInt("product_code")));
+				bean.setName(rs1.getString("product_name"));
+				bean.setPrice(rs1.getInt("price"));
+				bean.setQuantity(rs1.getInt("quantity"));
 				listSearch.add(bean);
-			} while (rs.next());
+			} while (rs1.next());
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		} 
 		
 		return listSearch;
-		
-		
-		
-
 	}
 
 }

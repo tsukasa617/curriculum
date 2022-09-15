@@ -32,7 +32,7 @@ ArrayList<Bean> listSearch = (ArrayList<Bean>) request.getAttribute("listSearch"
 			</tr>
 
 			<%
-			if (listSearch != null) {
+			if (listSearch != null && listSearch.size() != 0) {
 				for (int i = 0; i < listSearch.size(); i++) {
                       	%>
                       	
@@ -41,20 +41,30 @@ ArrayList<Bean> listSearch = (ArrayList<Bean>) request.getAttribute("listSearch"
 				<td><%=listSearch.get(i).getName()%></td>
 				<td><%=listSearch.get(i).getPrice()%></td>
 				<td><a
-					href="<%=request.getContextPath()%>/servlet/change?product_code=<%=listSearch.get(i).getNum()%>">
+					href="<%=request.getContextPath()%>/servlet/change?product_code=<%=listSearch.get(i).getNum()%>
+					product_name=<%=listSearch.get(i).getName()%>price=<%=listSearch.get(i).getPrice()%>">
 						編集</a></td>
 
 			</tr>
 
 
 			<%
-			}
-			}
-		
+			} %>
+				</table>
+		<%	} else if (listSearch == null) {
 			%>
+			<p>テーブルデータがありません。</p>
+			<%
+			} else {
+			%>
+			<p>該当するデータはありません。</p>
+			<%
+			}
+			%>
+		
+			
 
-		</table>
-
+		
 
 
 	</form>

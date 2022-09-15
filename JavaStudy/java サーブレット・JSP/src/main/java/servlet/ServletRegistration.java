@@ -33,6 +33,8 @@ public class ServletRegistration extends HttpServlet {
 			//Registrationクラスをインスタンス化する。                
 			Registration registration = new Registration();
 
+			String message = bean.getName();
+			
 			//1件登録メソッドを呼び出し
 			int count = registration.insert(bean);
 
@@ -42,21 +44,30 @@ public class ServletRegistration extends HttpServlet {
 				// registration.jspへ	
 				request.getRequestDispatcher("/registration.jsp").forward(request, response);
 				return;
-			} 
-			
-				//	単価の範囲チェック
+			}
+
+			//	文字数チェック
+			if (message.length() > 50) {
+				request.setAttribute("productOver", "登録できません文字数オーバーです");
+				// registration.jspへ	
+				request.getRequestDispatcher("/registration.jsp").forward(request, response);
+				return;
+			}
+
+			//	単価の範囲チェック
 			if (bean.getPrice() < 1 || bean.getPrice() >= 100000) {
 				request.setAttribute("amountOver", "単価は１以上100000未満を入力してください");
 				// registration.jspへ	
 				request.getRequestDispatcher("/registration.jsp").forward(request, response);
 				return;
 			}
-			
+
 			//	search.jspへ	
 			request.getRequestDispatcher("/search.jsp").forward(request, response);
 
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
+			
 			// registration.jspへ	
 			request.getRequestDispatcher("/registration.jsp").forward(request, response);
 

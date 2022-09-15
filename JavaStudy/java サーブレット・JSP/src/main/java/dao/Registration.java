@@ -5,14 +5,22 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import bean.Bean;
-import db.DB;
+import db.ConnectionDB;
 
 public class Registration {
 
 	//	DB接続
-	DB DB = new DB();
+	ConnectionDB condb = new ConnectionDB();
 
 	//データベースへデータを登録するメソッド
+	/**
+     * データを登録する
+     *
+     * @param insertSQL
+     * @param con
+     * @param smt
+     * @throws SQLException
+     */
 	public int insert(Bean bean) {
 		//変数宣言
 		Connection con = null;
@@ -31,6 +39,7 @@ public class Registration {
 			//	商品名チェック
 			if (bean.getName() == "") {
 				System.out.println("商品名を入力してください");
+				
 				//	単価の範囲チェック
 			} else if (bean.getPrice() < 1 || bean.getPrice() >= 100000) {
 				System.out.println("単価は１以上100000未満を入力してください");
@@ -39,7 +48,7 @@ public class Registration {
 
 				//	商品名と単価の範囲がOKの場合
 
-				con = DB.getConnection();
+				con = condb.getConnection();
 
 				smt = con.createStatement();
 
