@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  web:
+    container_name: survey_web
+    build: ./docker
+    ports:
+      - 1000:80
+    privileged: true
+    volumes:
+      - ./server:/var/www/html/public
+
+  db:
+    #m1macの場合は下記コメントアウトを外す 
+    #platform: linux/x86_64 
+    image: mysql:8.0
+    container_name: survey_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: SurveyManagement
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --innodb-use-native-aio=0 --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/db/sql:/docker-entrypoint-initdb.d
+    ports:
+      - 1200:3306
+
+  phpmyadmin:
+    container_name: survey_pro
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOSTS=survey_db
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    ports:
+      - 1100:80

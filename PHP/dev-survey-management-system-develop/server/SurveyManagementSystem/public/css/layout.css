@@ -1,0 +1,633 @@
+
+    .navbar {
+        /* background-color: #ffc130;旧設定 */
+        background-color: #A6A6A6;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 1px 2px 3px #4d4d4d;
+    }
+
+    .top_baner{
+        padding: 14px 0 2px 0;
+    }
+
+    /* p-nav -> head_nav */
+    .head_nav {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin-right: 20px;
+    }
+
+    /* c-nav -> content_nav */
+    .content_nav {
+        padding-right: 10px;
+    }
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+    }
+
+    /* 各ページのタイトル部分　例：顧客一覧 */
+    .page_title {
+        font-size: 30px;
+        margin-left: 60px;
+    }
+
+    .login-now{
+        margin-right: 10px;
+        color: rgba(255,255,255);
+    }
+
+    /* 各ページの「戻る」「新規登録」などのサブメニュー部分 */
+    .sub_menu {
+        float: right;
+        padding-bottom: 15px;
+    }
+
+    .menu-right{
+        margin-right: -5px;
+    }
+
+    .menu-add-right{
+        margin-right: -15px;
+    }
+
+    /* サブメニュー部分 */
+    .any_method {
+        float: right;
+        margin-bottom: 10px;
+    }
+
+    /* サブメニュー部分を横並びに */
+    .any_method li {
+        list-style: none;
+        display: inline;
+    }
+
+    /* サブメニュー部分で「リンク」に下線を付ける */
+    .any_method li.link {
+        margin: 5px;
+        text-decoration: underline;
+    }
+
+    table {
+        /* table-layout: fixed; */
+        width: 300px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    /* 文字列を折り返す */
+    table td {
+        word-break: break-all;
+    }
+
+    /* tittle -> detail_space 詳細ボタンの枠の幅 */
+    .detail_space {
+        width: 100px;
+    }
+    
+    /* table-space -> table_position テーブルの始点位置 */
+    .table_position {
+        margin: 0px 30px 0px 30px;
+    }
+
+    .white_space {
+        white-space: nowrap;
+    }
+
+    ul {
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    
+    ul li {
+        display: inline-block;
+        *display: inline;  
+        *zoom: 1;
+        padding: 5px;
+    }
+
+    /* 画像保存ボタン */
+    .space_botton{
+        margin: 3px;
+    }
+
+    /* 各詳細ページの項目名の幅 */
+    #detail_menu th {
+        table-layout: fixed;
+        width: 35%;
+        white-space: nowrap;
+    }
+
+    /* 各詳細ページの内容記載部分の幅 */
+    #detail_menu td {
+        table-layout: fixed;
+        width: 65%;
+    }
+
+    /* 確認画面のボーダーにスペースを入れる */
+    #check {
+        border-collapse: separate;
+    }
+
+    /* 確認画面の項目名の文字サイズ */
+    #check th {
+        font-size: 18px;
+    }
+
+    /* 「以下の内容で登録します」の表示 */
+    .enter_check_top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* 「以下の内容で登録します」の文字サイズ */
+    #enter_check {
+        font-size: 23px;
+    }
+
+    /* 検索ページの検索ボタンを調整　＊現在は未使用 */
+    #search_button {
+        margin-left: 557px;
+        width: 100px;
+        border-radius: 2px;
+    }
+
+    /* 検索ページの検索枠の開始位置 ＊現在は未使用 */
+    .search_box {
+        margin-top: 30px;
+    }
+
+    /*  */
+    .search {
+        margin: 30px 0 30px 30px;
+    }
+
+    /* アイコンのカーソルの形 */
+    .material-icons{
+        cursor : pointer;
+    }
+
+    /* 星マークの色 */
+    .import_color{
+        color: #FFCC33;
+    }
+
+    /* 詳細検索の枠を調整 */
+    .search_detail {
+        border: 1px solid #E6E6E6;
+        background-color: #F0F0F0;
+        padding: 8px 25px 25px 25px;
+    }
+
+    /* 詳細検索　不要かも */
+    .target_level {
+        padding: 4px 10px;
+        margin-bottom: 10px; 
+        border: 1px solid #333333; 
+        text-decoration: underline;
+        background-color: white; 
+        margin-left: 30px;
+    }
+
+    /* グラフ出力画面 inputフォームの高さ  */
+    .target_text {
+        height: 34px;
+    }
+
+    /* グラフ出力画面 dateフォームの調整 */
+    .target_date {
+        width: 140px; 
+        height: 34px;
+    }
+
+    /* グラフ出力画面 カテゴリー選択フォームの調整 */
+    .graph_select {
+        height: 30px; 
+        margin-left: 30px; 
+        width: 98px;
+    }
+
+    .btn-link {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+    }
+
+    .btn-link:hover, .btn-link:active {
+        background-color: #F2F2F2 !important;
+        border: none;
+    }
+
+    /* ここから↓が新規追加したもの */
+    .scroll-table {
+        display: block;
+        position: relative;
+        border: 0px none;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scroll-table::-webkit-scrollbar {
+        display:none;
+    }
+
+    td label {
+        float: right;
+        padding-top: 8px;
+        font-size: 1.1em;
+    }
+
+    /* 案件登録の入力フォーム同士の間調整 */
+    .content_position {
+        margin-top: 10px;
+    }
+
+    /* 案件登録ページの外枠と入力フォームの調整 */
+    .matter_frame {
+        padding: 0px;
+        margin: 10px -10px 10px -10px;
+    }
+    
+    /* 案件登録ページの検索窓の位置調整 */
+    .matter_search_position {
+        display: flex; 
+        justify-content: center;
+    }
+
+    /* 案件登録ページの検索ボタンの調整 */
+    .matter_search_button {
+        margin-left: 10px; 
+        width: 100px
+    }
+
+    /* 検索ボックスの設定 */
+    .search_box {
+        width: 200px;
+        height: 38px; 
+        margin: 5px 0 0 20px;
+        
+    }
+
+    /* 案件一覧ページ・サブメニュー */
+    .matter_all_sub {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* 案件一覧ページ・検索BOX */
+    .matter_all_search {
+        margin-right: auto;
+    }
+
+    /* TOPへ戻るボタン */
+    #page_top {
+        position: fixed;
+        bottom: 30px;
+        right: 0.7rem;
+        z-index: 10;
+    }
+    #page_top a {
+        background-color: #999;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 20px;
+    }
+    #page_top a:hover {
+        background-color: #666;
+        text-decoration: none;
+    }
+
+    /* ヘッダーのサイト名の調整 */
+    a.site_title:link,
+    a.site_title:visited,
+    a.site_title:hover,
+    a.site_title:active {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* 顧客情報更新時の成功時の文字調整*/
+    .message {
+        font-size: 1.5rem;
+        color: #FF0000;
+    }
+
+    /* ajax処理中の画像表示--------------------------------------------------------- */
+    #loading {
+        display: table;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        opacity: 0.8;
+    }
+
+    #loading .loadingMsg {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 140px;
+        background: url(../image/325-66.gif) center center no-repeat;
+    }
+    /*------------------------------------------------------------------------------*/
+
+    /* 詳細検索の検索結果---------------------------------------------------------- */
+    .search-result-title {
+        font-size: 30px;
+        margin-left: 60px;
+    }
+
+    .search-result-count {
+        font-size: 15px;
+        display:inline;
+    }
+    /*------------------------------------------------------------------------------*/
+
+    /*matter/all、テーブルの行の色変更*/
+    .chnage-ng-color {
+        background-color: #DDDDDD;
+    }
+
+    .chnage-finished-color {
+        background-color: #FF4F50;
+    }
+
+    .chnage-error-color {
+        background-color: #FFFF55;
+    }
+
+    .item-font-weight{
+        font-weight: bold;
+    }
+
+    /* 申し込み画面 */
+
+    .lp-back-color{
+        background: #eaf4ff;
+    }
+
+    @media (min-width: 481px) {
+    .lp-container-inner {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .lp-container-inner{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 780px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: 481px) {
+    .lp-head {
+        font-size: 4vw;
+    }
+
+    .lp-head{
+        margin-bottom: 2rem;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: #004aa7;
+        font-size: 2.5vw;
+    }
+
+    .lp-Content{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .lp-Content-Left{
+        width: calc((100% - 30px) / 2);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .lp-Content-Item{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 481px) {
+    .lp-Content-Left-Item-Label {
+        font-size: 2vw;
+    }
+
+    .lp-Content-Left-Item-Label {
+        width: 100%;
+        letter-spacing: 0.1em;
+        color: #004aa7;
+        font-size: 1.26vw;
+    }
+
+    .lp-Content-Left-Item-Label-Required {
+        border-radius: 6px;
+        margin-left: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 45px;
+        display: inline-block;
+        text-align: center;
+        background: #004aa7;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .cjkB {
+        font-family: noto-sans-cjk-jp,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .lp-Content-Item-Wrap {
+        position: relative;
+        margin-top: 16px;
+        width: 100%;
+    }
+
+    .wpcf7-form-control-wrap {
+        position: relative;
+    }
+
+    .lp-Content-Item-Input {
+        position: relative;
+        outline: none;
+        border-style: none none solid;
+        border-bottom-color:#004aa7;
+        border-radius: 6px;
+        padding-left: 1em;
+        padding-right: 1em;
+        height: 54px;
+        width: 100%;
+        background: #fff;
+        font-size: 18px;
+        z-index: 2;
+    }
+
+    .lp-top {
+        margin-top: 40px;
+    }
+
+    .lp-Content-Right{
+        margin-left: 30px;
+        width: calc((100% - 30px) / 2);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .lp-Content-Right-Item {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 481px) {
+    .lp-Content-right-Item-Label {
+        font-size: 2vw;
+    }
+    
+    .lp-Content-right-Item-Label {
+        width: 100%;
+        letter-spacing: 0.1em;
+        color: #004aa7;
+        font-size: 1.26vw;
+    }
+
+    .lp-Form-Btn {
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 410px;
+        display: block;
+    }
+
+    /* 申し込み新規登録画面 */
+
+    .tittle-fraise{
+        text-align: start;
+    }
+
+    .lp-new-Content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lp-new-Content-Item{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    /* 申し込みマッチング画面 */
+    @media (min-width: 481px) {
+    .lp-match-head-second {
+        font-size: 3vw;
+    }
+    
+    .lp-match-head-second {
+        margin-bottom: 2rem;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: #004aa7;
+        font-size: 1.5vw;
+    }
+
+    .lp-match-Content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+        align-items: center;
+    }
+
+    .lp-match-Content input[type=radio]{
+        width: 3rem;
+        height: 1.1rem;
+        vertical-align: middle;
+        right: 1rem;
+        bottom: 0.2rem;
+        position: relative;
+    }
+
+    .lp-match-Content-Item {
+        width: 100%;
+        border-radius: 16px;
+        position: relative;
+    }
+
+    .lp-match-Content-top {
+        margin-top: 50px;
+    }
+
+    .lp-match-label-bottom {
+        margin-top: 0.5rem;
+    }
+
+    .lp-match-item-mer{
+        margin-right: 20px;
+    }
+
+    .lp-radio-button {
+        height: 10px;
+    }
+
+    .lp-back{
+        justify-content: flex-end;
+    }
+
+    .lp-table {
+        background-color: #fff;
+    }
+
+    /* csv import  message */
+    .csv-message {
+        position: relative;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+    }
+
+    .reward_button_child{
+        position: absolute;
+        right: 0;
+    }
+
+    @media (min-width: 992px) {
+        .container_reward {
+            max-width: 985px;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .container_reward {
+            max-width: 985px;
+        }
+    }
+
+    .auth_line {
+        font-weight: bold; 
+        color: red; 
+        line-height: 35px;
+    }

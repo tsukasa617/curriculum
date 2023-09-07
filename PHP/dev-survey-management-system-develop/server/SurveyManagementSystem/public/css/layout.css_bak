@@ -1,0 +1,177 @@
+
+    .navbar {
+        background-color: #ffc130;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 1px 2px 3px #4d4d4d;
+    }
+
+    /* p-nav -> head_nav */
+    .head_nav {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin-right: 20px;
+    }
+
+    /* c-nav -> content_nav */
+    .content_nav {
+        padding-right: 10px;
+    }
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+    }
+
+    /* 各ページのタイトル部分　例：顧客一覧 */
+    .page_title {
+        font-size: 30px;
+        margin-left: 60px;
+    }
+
+    /* 各ページの「戻る」「新規登録」などのサブメニュー部分 */
+    .sub_menu {
+        margin-right: 30px;
+        float: right;
+        padding-bottom: 15px;
+    }
+
+    /* サブメニュー部分を横並びに */
+    .any_method li {
+        list-style: none;
+        display: inline;
+    }
+
+    /* サブメニュー部分で「リンク」に下線を付ける */
+    .any_method li.link {
+        margin: 5px;
+        text-decoration: underline;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 300px;
+    }
+
+    /* 文字列を折り返す */
+    table td {
+        word-break: break-all;
+    }
+
+    /* tittle -> detail_space 詳細ボタンの枠の幅 */
+    .detail_space {
+        width: 100px;
+    }
+    
+    /* table-space -> table_position テーブルの始点位置 */
+    .table_position {
+        margin: 0px 30px 0px 30px;
+    }
+
+    ul {
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    
+    ul li {
+        display: inline-block;
+        *display: inline;  
+        *zoom: 1;
+        padding: 5px;
+    }
+
+    /* 各詳細ページの項目名の幅 */
+    #detail_menu th {
+        table-layout: fixed;
+        width: 50px;
+    }
+
+    /* 各詳細ページの内容記載部分の幅 */
+    #detail_menu td {
+        table-layout: fixed;
+        width: 300px;
+    }
+
+    /* 確認画面のボーダーにスペースを入れる */
+    #check {
+        border-collapse: separate;
+    }
+
+    /* 確認画面の項目名の文字サイズ */
+    #check th {
+        font-size: 18px;
+    }
+
+    /* 「以下の内容で登録します」の文字サイズ */
+    #enter_check {
+        font-size: 20px;
+    }
+
+    /* 検索ページの検索ボタンを調整　＊現在は未使用 */
+    #search_button {
+        margin-left: 557px;
+        width: 100px;
+        border-radius: 2px;
+    }
+
+    /* 検索ページの検索枠の開始位置 ＊現在は未使用 */
+    .search_box {
+        margin-top: 30px;
+    }
+
+    /*  */
+    .search {
+        margin: 30px 0 30px 30px;
+    }
+
+
+    /* 詳細検索の枠を調整 */
+    .search_detail {
+        border: 1px solid #E6E6E6;
+        background-color: #F0F0F0;
+        padding: 8px 25px 25px 25px;
+    }
+
+    /* 詳細検索　不要かも */
+    .target_level {
+        padding: 4px 10px;
+        margin-bottom: 10px; 
+        border: 1px solid #333333; 
+        text-decoration: underline;
+        background-color: white; 
+        margin-left: 30px;
+    }
+
+    /* グラフ出力画面 inputフォームの高さ  */
+    .target_text {
+        height: 34px;
+    }
+
+    /* グラフ出力画面 dateフォームの調整 */
+    .target_date {
+        width: 140px; 
+        height: 34px;
+    }
+
+    /* グラフ出力画面 カテゴリー選択フォームの調整 */
+    .graph_select {
+        height: 30px; 
+        margin-left: 30px; 
+        width: 98px;
+    }
+
+    .btn-link {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+    }
+
+    .btn-link:hover, .btn-link:active {
+        background-color: #F2F2F2 !important;
+        border: none;
+    }

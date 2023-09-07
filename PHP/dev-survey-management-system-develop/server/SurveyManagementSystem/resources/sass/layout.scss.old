@@ -1,0 +1,65 @@
+
+        .navbar {
+            /*background-image: url(tera.jpg);*/
+            /* background-color: wheat; */
+            background-color: #ffc130;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 1px 2px 3px #4d4d4d;
+        }
+
+        .p-nav {
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
+            margin-right: 20px;
+        }
+
+        .c-nav {
+            padding-right: 10px;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 300px;
+        }
+
+        .tittle {
+            width: 100px;
+        }
+        
+        .table-space {
+            margin: 30px;
+        }
+
+        ul {
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        
+        ul li {
+            display: inline-block;
+            *display: inline;  
+            *zoom: 1;
+            padding: 5px;
+        }
+
+        .btn-link {
+        background-color: #ffffff;
+        color: #0000000;
+        border: none;
+        }
+
+        .btn-link:hover, .btn-link:active {
+        background-color: #F2F2F2 !important;
+        border: none;
+        }

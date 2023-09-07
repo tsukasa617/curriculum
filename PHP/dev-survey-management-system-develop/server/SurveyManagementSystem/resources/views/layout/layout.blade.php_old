@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        {{-- 各ページごとにtitleタグを入れるために@yieldで空けておきます。 --}}
+        <title>@yield('title')</title>
+
+        <!-- Scripts -->
+        <script src="{{ asset('/js/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ asset('/js/app.js') }}" defer></script>
+        <script src="{{ asset('js/search.js') }}"></script>
+
+        <!-- Styles -->
+        <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('/css/layout.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light shadow">
+
+        @if( Auth::check() )
+            <div class="collapse navbar-collapse" id="auth_info">
+                <ul class="navbar-nav bg-light">
+                    <li>ログイン中：{{ Auth::user()->family_name }} {{ Auth::user()->personal_name }}</li>
+                </ul>
+            </div>
+        @endif
+
+            <div class="collapse navbar-collapse justify-content-center" id="title">
+                <h1>顧客管理システム</h1>
+            </div>
+
+            @if( Auth::check() )
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav">
+                    <li>
+                        <button type="button" class="btn btn-link page-link d-inline-block shadow" onclick="location.href=''" >トップメニュー<span class="sr-only"></span></button>
+                    </li>
+                    <li>
+                        <a class="btn btn-link page-link d-inline-block shadow" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        ログアウト
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            @endif
+
+        </nav>
+        @yield('content')
+    </body>
+</html>
